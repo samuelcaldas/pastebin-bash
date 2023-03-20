@@ -1,42 +1,42 @@
 # pastebin-bash
 
-pastebin-bash é um projeto que permite postar textos ou arquivos para pastebin.com usando uma função bash e curl.
+pastebin-bash is a project that allows you to post text or files to pastebin.com using a bash function and curl.
 
-## Funcionalidades
+## Features
 
-Com pastebin-bash você pode:
+With pastebin-bash you can:
 
-- Postar mensagens simples para pastebin.com usando o comando `pastebin 'sua mensagem'`.
-- Postar arquivos inteiros para pastebin.com usando o comando `cat seu_arquivo.txt | pastebin`.
-- Obter a URL do seu post na saída padrão.
+- Post simple messages to pastebin.com using the command `pastebin 'your message'`.
+- Post entire files to pastebin.com using the command `cat your_file.txt | pastebin`.
+- Get the URL of your post in the standard output.
 
-## Tecnologias utilizadas
+## Technologies used
 
-pastebin-bash utiliza as seguintes tecnologias:
+pastebin-bash uses the following technologies:
 
-- Bash: uma linguagem de script usada para interagir com sistemas operacionais baseados em Unix.
-- Curl: uma ferramenta de linha de comando usada para transferir dados via protocolos HTTP(S).
+- Bash: a scripting language used to interact with Unix-based operating systems.
+- Curl: a command line tool used to transfer data via HTTP(S) protocols.
 
-## Inicialização
+## Initialization
 
-Para usar pastebin-bash você precisa:
+To use pastebin-bash you need:
 
-- Ter bash e curl instalados no seu sistema operacional. Você pode verificar se eles estão instalados usando os comandos `bash --version` e `curl --version`.
-- Ter uma conta em pastebin.com e obter uma API key na página https://pastebin.com/api#1
-- Copiar e colar a função bash definida no arquivo pastebin.sh no seu terminal e substituir <your_api_key> pela sua API key obtida no passo anterior.
+- Have bash and curl installed on your operating system. You can check if they are installed using the commands `bash --version` and `curl --version`.
+- Have an account on pastebin.com and obtain an API key on the page https://pastebin.com/api#1
+- Copy and paste the bash function defined in the file pastebin.sh into your terminal and replace <your_api_key> with your API key obtained in the previous step.
 
-## Implementações futuras
+## Future implementations
 
-Algumas ideias para melhorar ou expandir pastebin-bash são:
+Some ideas for improving or expanding pastebin-bash are:
 
-- Adicionar opções para configurar a privacidade, a expiração e o formato dos posts.
-- Adicionar opções para listar, editar ou deletar os posts existentes.
-- Criar um script executável que possa ser instalado globalmente.
+- Add options to configure privacy, expiration, and format of posts.
+- Add options to list, edit or delete existing posts.
+- Create an executable script that can be installed globally.
 
-## Colaboradores
+## Contributors
 
-pastebin-bash foi criado por samuelcaldas. O código original foi encontrado em https://stackoverflow.com/a/58440856/10637718 e todos os créditos vão para o autor original.
+The original code was found at https://stackoverflow.com/a/58440856/10637718 and all credit goes to the original author.
 
-## Status do projeto
+## Project status
 
-pastebin-bash está concluído. Não há previsão de novas atualizações ou manutenção.
+pastebin-bash is complete. There are no plans for new updates or maintenance.
