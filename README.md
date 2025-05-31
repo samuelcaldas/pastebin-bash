@@ -7,8 +7,14 @@ pastebin-bash is a Bash function that allows you to easily post text or files to
 With pastebin-bash, you can:
 
 - **Post simple messages** to pastebin.com using the command `pastebin 'your message'`.
-- **Post entire files** to pastebin.com using the command `cat your_file.txt | pastebin`.
+- **Post entire files** to pastebin.com using the command `cat your_file.txt | pastebin` or `pastebin -f your_file.txt`.
+- **Customize your pastes** with options for:
+  - Title/name (`-n`, `--name`)
+  - Expiration time (`-e`, `--expire`)
+  - Privacy level (`-p`, `--private`)
+  - Syntax highlighting (`-l`, `--language`)
 - **Get the URL** of your post in the standard output.
+- **View help documentation** with `pastebin -h` or `pastebin --help`.
 
 ## Setup
 
@@ -33,7 +39,9 @@ To start using pastebin-bash, follow these steps:
 
 ## Usage
 
-Once set up, you can use the `pastebin` function directly in your terminal:
+Once set up, you can use the `pastebin` function in your terminal:
+
+### Basic Usage
 
 - To post a message:
   ```bash
@@ -43,9 +51,37 @@ Once set up, you can use the `pastebin` function directly in your terminal:
 - To post a file:
   ```bash
   cat your_file.txt | pastebin
+  # OR
+  pastebin -f your_file.txt
   ```
 
-- The function returns the URL of your post, which you can access directly.
+### Advanced Options
+
+- To post a file with syntax highlighting:
+  ```bash
+  pastebin -f script.py -l python -n "My Python Script"
+  ```
+
+- To create a private paste that expires in one hour:
+  ```bash
+  pastebin -p 1 -e 1H "Secret message"
+  ```
+
+- To see all available options:
+  ```bash
+  pastebin --help
+  ```
+
+#### Available Options
+
+| Option | Description | Values |
+|--------|-------------|--------|
+| `-f`, `--file` | Read from file instead of stdin or argument | File path |
+| `-n`, `--name` | Set paste name/title | Text |
+| `-e`, `--expire` | Set expiration time | N_MINUTES, 1H, 1D, 1W, 2W, 1M, 6M, 1Y |
+| `-p`, `--private` | Set privacy level | 0=public, 1=unlisted, 2=private |
+| `-l`, `--language` | Set syntax highlighting language | python, bash, c, etc. |
+| `-h`, `--help` | Display help message | |
 
 ## Contributors
 
@@ -53,4 +89,4 @@ The original concept for this script was inspired by a [Stack Overflow post](htt
 
 ## Project Status
 
-pastebin-bash is functional and complete. Currently, there are no plans for further updates or maintenance, but contributions are welcome.
+pastebin-bash is maintained and actively developed. The latest update includes enhanced functionality, better error handling, and improved security with HTTPS support. Contributions and feature requests are welcome.
